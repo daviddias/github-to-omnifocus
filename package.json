@@ -20,6 +20,6 @@
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:diasdavid/github-to-omnifocus.git"
   }
 }
