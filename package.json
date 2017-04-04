@@ -1,7 +1,7 @@
 {
   "name": "github-to-omnifocus",
   "description": "Sync the issues assigned to you, to omnifocus",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "David Dias <mail@daviddias.me>",
   "bin": "bin.js",
   "dependencies": {
