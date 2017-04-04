@@ -1,0 +1,25 @@
+{
+  "name": "github-to-omnifocus",
+  "description": "Sync the issues assigned to you, to omnifocus",
+  "version": "0.0.0",
+  "author": "David Dias <mail@daviddias.me>",
+  "bin": "bin.js",
+  "dependencies": {
+    "async": "^2.3.0",
+    "github": "^9.2.0",
+    "js-yaml": "^3.8.2",
+    "osa-omnifocus": "0.0.0",
+    "osenv": "^0.1.4"
+  },
+  "keywords": [
+    "Save",
+    "the",
+    "Day"
+  ],
+  "license": "MIT",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
