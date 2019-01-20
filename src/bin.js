@@ -1,27 +1,33 @@
 #!/usr/bin/env node
 
-const GitHub = require('github')
+const gh = require('@octokit/rest')()
 const fs = require('fs')
 const osenv = require('osenv')
 const yaml = require('js-yaml')
 const waterfall = require('async/waterfall')
 const each = require('async/each')
 
-const omnifocus = require('osa-omnifocus')
-const gh = new GitHub({ version: '3.0.0' })
+const omnifocus = require('./omnifocus.js')
 
 const config = getConfig()
 let counter = 0
 
 waterfall([
   (cb) => {
+    // gh.authenticate({ type: 'token', token: config.token })
     gh.authenticate({ type: 'oauth', token: config.token })
-    gh.issues.getAll({ filter: 'assigned' }, cb)
+    gh.issues.list({ filter: 'assigned' })
+      .then((issues) => cb(null, issues.data))
+      .catch((err) => cb(err))
   },
-  (issues, cb) => omnifocus.getTasks((err, tasks) => cb(err, issues.data, tasks)),
+  (issues, cb) => {
+    omnifocus.getTasks((err, tasks) => cb(err, issues, tasks))
+  },
   (issues, tasks, cb) => {
     const current = tasks.map((task) => task.name)
 
+    console.log(tasks)
+    return cb()
     each(issues, (issue, cb) => {
       const name = `${issue.title} - ${issue.repository.full_name}/issues/${issue.number}`
 

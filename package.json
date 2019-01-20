@@ -3,13 +3,13 @@
   "description": "Sync the issues assigned to you, to omnifocus",
   "version": "0.1.0",
   "author": "David Dias <mail@daviddias.me>",
-  "bin": "bin.js",
+  "bin": "src/bin.js",
   "dependencies": {
-    "async": "^2.3.0",
-    "github": "^9.2.0",
-    "js-yaml": "^3.8.2",
-    "osa-omnifocus": "0.0.0",
-    "osenv": "^0.1.4"
+    "@octokit/rest": "^16.10.0",
+    "async": "^2.6.1",
+    "js-yaml": "^3.12.1",
+    "osenv": "^0.1.5",
+    "run-applescript": "^3.2.0"
   },
   "keywords": [
     "Save",
@@ -20,6 +20,6 @@
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:diasdavid/github-to-omnifocus.git"
+    "url": "git@github.com:daviddias/github-to-omnifocus.git"
   }
 }

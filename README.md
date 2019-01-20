@@ -17,6 +17,10 @@ token: <token>
 Success - added 30 new isuses to Omnifocus
 ```
 
+## Acknowledgements
+
+Huge thanks to @jsit for his [OmniFocus 3 AppleScript Guide](https://github.com/jsit/omnifocus-3-applescript-guide)
+
 ## License
 
 MIT
