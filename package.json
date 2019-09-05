@@ -5,11 +5,11 @@
   "author": "David Dias <mail@daviddias.me>",
   "bin": "src/bin.js",
   "dependencies": {
-    "@octokit/rest": "^16.10.0",
-    "async": "^2.6.1",
-    "js-yaml": "^3.12.1",
+    "@octokit/rest": "^16.28.9",
+    "js-yaml": "^3.13.1",
     "osenv": "^0.1.5",
-    "run-applescript": "^3.2.0"
+    "p-all": "^2.1.0",
+    "p-waterfall": "^2.1.0"
   },
   "keywords": [
     "Save",

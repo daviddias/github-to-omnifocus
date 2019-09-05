@@ -1,5 +1,17 @@
-const runAS = require('run-applescript')
+/* global Application */
+const osa2 = require('osa2')
 
+// osa2 Wraps function to be run inside Apple's JavaScript for Automation environment.
+const tasks = osa2(() => Application('OmniFocus').getDocument().flattenedTasks())
+
+try {
+  console.log(tasks)
+  tasks()
+} catch (err) {
+  console.log(err)
+}
+
+/*
 function d (val) {
   return val !== undefined
 }
@@ -31,6 +43,7 @@ exports.addTask = function (task, cb) {
     OmniFocus.parseTasksInto(doc, { withTransportText: task, asSingleTask: true })
   }, task, cb)
   */
+/*
 }
 
 exports.getTasks = () => {
@@ -61,6 +74,7 @@ exports.getTasks = () => {
     return tasks
   }, cb)
   */
+/*
 }
 
 runAS.sync(`
@@ -68,3 +82,4 @@ runAS.sync(`
     make new task with properties {name: "nuTASK"}
   end tell
 `)
+*/
